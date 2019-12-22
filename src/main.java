@@ -4,12 +4,20 @@ public class main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
     ContaBancaria conta = new ContaBancaria();
+    char opt;
+        System.out.println("Vai ter Deposito iniial? S/N: ");
+        opt = sc.nextLine().charAt(0);
+        double deposito=0;
+
     System.out.print("Digie o nome: ");
     conta.setNome(sc.nextLine());
         System.out.print("Numero da conta: ");
         conta.setNumeroConta(sc.nextLine());
-        System.out.print("Deposito incial: ");
-        double deposito = sc.nextDouble();
+        if(opt=='s'){
+            System.out.print("Deposito incial: ");
+            deposito = sc.nextDouble();
+        }
+
         double saldo = 0;
         int escolha = 0;
         double saque = 0;
